@@ -15,3 +15,105 @@ h2{
     font-size: 16px;
     font-family: Arial, sans-serif;
 }
+
+@keyframes color-change {
+    0% {
+      color: blue;
+    }
+  
+    50% {
+      color: red;
+    }
+  
+    100% {
+      color: blue;
+    }
+}
+@keyframes color-change2 {
+    0% {
+      color: black;
+    }
+  
+    50% {
+      color: purple;
+    }
+  
+    100% {
+      color: brown;
+    }
+
+    75% {
+        color: purple;
+    }
+}
+
+h1:hover {
+    animation: color-change 3s infinite;
+}
+
+body{
+    animation: color-change2  2s infinite;
+}
+
+/* Cambio de color al pasar el mouse */
+.cambio-color:hover {
+    color: rgb(4, 0, 255); /* Cambia el color del texto al pasar el mouse */
+    transition: color 0.3s; /* Agrega una transición suave de 0.3 segundos */
+  }
+  
+  /* Animación de desvanecimiento */
+  .desvanecer {
+    opacity: 0; /* Inicialmente, el elemento está completamente transparente */
+    transition: opacity 0.5s; /* Agrega una transición suave de 0.5 segundos */
+  }
+  
+  .desvanecer:hover {
+    opacity: 1; /* Al pasar el mouse, el elemento se vuelve completamente visible */
+  }
+
+  /* Animación desplazar */
+  .desplazar {
+    transform: translateX(-100%); /* Mueve el elemento fuera del área visible */
+    transition: transform 0.5s; /* Agrega una transición suave de 0.5 segundos */
+  }
+  
+  .desplazar:hover {
+    transform: translateX(0); /* Al pasar el mouse, el elemento se desplaza hacia adentro */
+  }
+  @keyframes chenter{
+    from{
+        text-align: center;
+    }
+    to{
+        text-align: left;
+    }
+  }
+  .centrado{
+    animation: chenter 2s infinite;
+  }
+  /* Animación rotación infinita */
+  .rotacion-infinita {
+    animation: girar 2s infinite; /* La animación "girar" dura 2 segundos y se repite infinitamente */
+  }
+  @keyframes girar {
+    from {
+      transform: rotate(0deg); /* La rotación inicial es de 0 grados */
+    }
+    to {
+      transform: rotate(360deg); /* La rotación final es de 360 grados */
+    }
+  }
+  
+  /* Animación de rebote */
+  .rebote {
+    animation: rebotar 1s infinite; /* La animación "rebotar" dura 1 segundo y se repite infinitamente */
+  }
+  
+  @keyframes rebotar {
+    0%, 100% {
+      transform: translateY(0); /* Estado inicial y final: sin desplazamiento vertical */
+    }
+    50% {
+      transform: translateY(-20px); /* Pico del rebote: desplazamiento hacia arriba */
+    }
+}
